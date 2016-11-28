@@ -18,6 +18,7 @@ rref <- function(x) {
                   x[i, j:n] <- x[i, j:n] - x[j, j:n] * x[i, j] / x[j, j]
                 }
       }
+      #substitute() returns the name of object
     } else cat("\nThe type of", " \"", substitute(x), "\" is not numeric.\n", sep="")
   } else cat("\n\"", substitute(x), "\" is not a matrix.\n")
   return(x)
