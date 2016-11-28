@@ -1,4 +1,4 @@
-'rref <- function(x) {
+rref <- function(x) {
   if (is.matrix(x)) {
     if (is.numeric(x)) {
       m <- nrow(x)
@@ -22,4 +22,4 @@
     } else cat("\nThe type of", " \"", substitute(x), "\" is not numeric.\n", sep="")
   } else cat("\n\"", substitute(x), "\" is not a matrix.\n")
   return(x)
-}'
+}
