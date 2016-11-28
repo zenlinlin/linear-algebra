@@ -6,13 +6,12 @@ rref <- function(x) {
       for (j in 1:n) {
         if (j > m) 
           next else
-            i <- j
-            if (all(x[i:m, j] == 0)) 
+            if (all(x[j:m, j] == 0)) 
               next else
-                if (x[i, j] == 0) {
-                  below <- x[(i+1):m, j]
-                  Nonzero <- which(below != 0)[1] + i
-                  x[i, ] <- x[Nonzero, ]
+                if (x[j, j] == 0) {
+                  below <- x[(j+1):m, j]
+                  Nonzero <- which(below != 0)[1] + j
+                  x[j, ] <- x[Nonzero, ]
                   }
                 for (i in 1:m) {
                   if (i == j) next
